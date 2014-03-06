@@ -19,11 +19,10 @@
     
     NSMutableArray *array = [@[] mutableCopy];
     
-    [directoryContents enumerateObjectsUsingBlock:^(NSString *path, NSUInteger idx, BOOL *stop) {
-        
+    [directoryContents enumerateObjectsUsingBlock:^(NSString *innerPath, NSUInteger idx, BOOL *stop) {
         FolderNode *folderNode = [[FolderNode alloc] init];
-        folderNode.name = path;
-        folderNode.folders = [self scanWithPath:path];
+        folderNode.name = innerPath;
+        folderNode.folders = [self scanWithPath:[path stringByAppendingPathComponent:innerPath]];
         
         [array addObject:folderNode];
     }];

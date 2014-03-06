@@ -29,9 +29,9 @@
 
 - (void)testUnzipper
 {
-  Unzipper *unzipper = [[Unzipper alloc] init];
+//  Unzipper *unzipper = [[Unzipper alloc] init];
   
-  [unzipper unzip];
+//  [unzipper unzip];
   
   
 }

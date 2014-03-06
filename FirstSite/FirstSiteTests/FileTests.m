@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "FileScanner.h"
 #import "Paths.h"
+#import "Unzipper.h"
 
 @interface FileTests : XCTestCase
 
@@ -30,10 +31,13 @@
 
 - (void)testScanner
 {
+    Unzipper *unzipper = [[Unzipper alloc] init];
+    
+    [unzipper unzip];
+    
     FileScanner *scanner = [[FileScanner alloc] init];
     
     NSArray *array = [scanner scanWithPath:[Paths applicationDocumentsDirectory].path];
-    
     
     NSLog(@"directoryContents ====== %@",array);
     
