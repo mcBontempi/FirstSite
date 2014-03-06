@@ -28,6 +28,6 @@
         [array addObject:folderNode];
     }];
     
-    return directoryContents;
+    return array;
 }
 @end
