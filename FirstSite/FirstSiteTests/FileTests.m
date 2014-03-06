@@ -30,12 +30,13 @@
 
 - (void)testScanner
 {
-  FileScanner *scanner = [[FileScanner alloc] initWithURL:[Paths applicationDocumentsDirectory]];
-  
-  NSArray *directoryContents = [scanner scan];
-
-  NSLog(@"directoryContents ====== %@",directoryContents);
-
+    FileScanner *scanner = [[FileScanner alloc] init];
+    
+    NSArray *array = [scanner scanWithPath:[Paths applicationDocumentsDirectory].path];
+    
+    
+    NSLog(@"directoryContents ====== %@",array);
+    
 }
 
 @end

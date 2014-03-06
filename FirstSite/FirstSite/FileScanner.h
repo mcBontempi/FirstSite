@@ -10,7 +10,6 @@
 
 @interface FileScanner : NSObject
 
-- (id)initWithURL:(NSURL *)url;
-- (NSArray *)scan;
+- (NSArray *)scanWithPath:(NSString *)path;
 
 @end

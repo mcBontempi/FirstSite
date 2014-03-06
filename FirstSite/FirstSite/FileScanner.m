@@ -7,19 +7,27 @@
 //
 
 #import "FileScanner.h"
+#import "FolderNode.h"
 
 @implementation FileScanner
 
 - (NSArray *)scanWithPath:(NSString *)path
 {
-  NSError * error;
-  NSArray * directoryContents =  [[NSFileManager defaultManager]
-                                  contentsOfDirectoryAtPath:path error:&error];
-  
- 
-  if (directoryContents)
-  
-  
-  return directoryContents;
+    NSError * error;
+    NSArray * directoryContents =  [[NSFileManager defaultManager]
+                                    contentsOfDirectoryAtPath:path error:&error];
+    
+    NSMutableArray *array = [@[] mutableCopy];
+    
+    [directoryContents enumerateObjectsUsingBlock:^(NSString *path, NSUInteger idx, BOOL *stop) {
+        
+        FolderNode *folderNode = [[FolderNode alloc] init];
+        folderNode.name = path;
+        folderNode.folders = [self scanWithPath:path];
+        
+        [array addObject:folderNode];
+    }];
+    
+    return directoryContents;
 }
 @end
