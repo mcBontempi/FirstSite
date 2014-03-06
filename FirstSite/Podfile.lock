@@ -1,0 +1,10 @@
+PODS:
+  - ZipArchive (1.2.0)
+
+DEPENDENCIES:
+  - ZipArchive
+
+SPEC CHECKSUMS:
+  ZipArchive: 93bff5d8b435767ccfac976ed08ca611d950d3d0
+
+COCOAPODS: 0.29.0

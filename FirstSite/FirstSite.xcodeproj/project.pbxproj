@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0E0331D2F44D4EA1BA0E03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2504630EAA5D470FA87ED279 /* libPods.a */; };
 		FD08010A18C7C26F00011351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010918C7C26F00011351 /* Foundation.framework */; };
 		FD08010C18C7C26F00011351 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010B18C7C26F00011351 /* CoreGraphics.framework */; };
 		FD08010E18C7C26F00011351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010D18C7C26F00011351 /* UIKit.framework */; };
@@ -22,6 +23,13 @@
 		FD08012E18C7C26F00011351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010D18C7C26F00011351 /* UIKit.framework */; };
 		FD08013618C7C26F00011351 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD08013418C7C26F00011351 /* InfoPlist.strings */; };
 		FD08013818C7C26F00011351 /* FirstSiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08013718C7C26F00011351 /* FirstSiteTests.m */; };
+		FDA9871718C7CA8D0019DBB3 /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871618C7CA8D0019DBB3 /* FileScanner.m */; };
+		FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871918C7CCC80019DBB3 /* FileNode.m */; };
+		FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871C18C7CCDA0019DBB3 /* FolderNode.m */; };
+		FDC9F4F518C7D0A00089732D /* FileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4F418C7D0A00089732D /* FileTests.m */; };
+		FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4F818C7D1BE0089732D /* Unzipper.m */; };
+		FDC9F4FB18C7D2530089732D /* UnzipperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4FA18C7D2530089732D /* UnzipperTests.m */; };
+		FDC9F4FE18C8679F0089732D /* Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4FD18C8679F0089732D /* Paths.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2504630EAA5D470FA87ED279 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		525926D6002C46EAB28CE648 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FD08010618C7C26E00011351 /* FirstSite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD08010918C7C26F00011351 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD08010B18C7C26F00011351 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +65,19 @@
 		FD08013318C7C26F00011351 /* FirstSiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstSiteTests-Info.plist"; sourceTree = "<group>"; };
 		FD08013518C7C26F00011351 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD08013718C7C26F00011351 /* FirstSiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSiteTests.m; sourceTree = "<group>"; };
+		FDA9871318C7CA3F0019DBB3 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Node.h; path = FirstSite/Node.h; sourceTree = "<group>"; };
+		FDA9871518C7CA8D0019DBB3 /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileScanner.h; path = FirstSite/FileScanner.h; sourceTree = "<group>"; };
+		FDA9871618C7CA8D0019DBB3 /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileScanner.m; path = FirstSite/FileScanner.m; sourceTree = "<group>"; };
+		FDA9871818C7CCC80019DBB3 /* FileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileNode.h; path = FirstSite/FileNode.h; sourceTree = "<group>"; };
+		FDA9871918C7CCC80019DBB3 /* FileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileNode.m; path = FirstSite/FileNode.m; sourceTree = "<group>"; };
+		FDA9871B18C7CCDA0019DBB3 /* FolderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderNode.h; path = FirstSite/FolderNode.h; sourceTree = "<group>"; };
+		FDA9871C18C7CCDA0019DBB3 /* FolderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderNode.m; path = FirstSite/FolderNode.m; sourceTree = "<group>"; };
+		FDC9F4F418C7D0A00089732D /* FileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTests.m; sourceTree = "<group>"; };
+		FDC9F4F718C7D1BE0089732D /* Unzipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unzipper.h; path = FirstSite/Unzipper.h; sourceTree = "<group>"; };
+		FDC9F4F818C7D1BE0089732D /* Unzipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unzipper.m; path = FirstSite/Unzipper.m; sourceTree = "<group>"; };
+		FDC9F4FA18C7D2530089732D /* UnzipperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnzipperTests.m; sourceTree = "<group>"; };
+		FDC9F4FC18C8679F0089732D /* Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paths.h; path = FirstSite/Paths.h; sourceTree = "<group>"; };
+		FDC9F4FD18C8679F0089732D /* Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paths.m; path = FirstSite/Paths.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +88,7 @@
 				FD08010C18C7C26F00011351 /* CoreGraphics.framework in Frameworks */,
 				FD08010E18C7C26F00011351 /* UIKit.framework in Frameworks */,
 				FD08010A18C7C26F00011351 /* Foundation.framework in Frameworks */,
+				7F0E0331D2F44D4EA1BA0E03 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +108,13 @@
 		FD0800FD18C7C26E00011351 = {
 			isa = PBXGroup;
 			children = (
+				FDC9F4F618C7D19F0089732D /* Unzipper */,
+				FDA9871418C7CA4B0019DBB3 /* Node */,
 				FD08010F18C7C26F00011351 /* FirstSite */,
 				FD08013118C7C26F00011351 /* FirstSiteTests */,
 				FD08010818C7C26E00011351 /* Frameworks */,
 				FD08010718C7C26E00011351 /* Products */,
+				525926D6002C46EAB28CE648 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +134,7 @@
 				FD08010B18C7C26F00011351 /* CoreGraphics.framework */,
 				FD08010D18C7C26F00011351 /* UIKit.framework */,
 				FD08012B18C7C26F00011351 /* XCTest.framework */,
+				2504630EAA5D470FA87ED279 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +170,8 @@
 			children = (
 				FD08013718C7C26F00011351 /* FirstSiteTests.m */,
 				FD08013218C7C26F00011351 /* Supporting Files */,
+				FDC9F4F418C7D0A00089732D /* FileTests.m */,
+				FDC9F4FA18C7D2530089732D /* UnzipperTests.m */,
 			);
 			path = FirstSiteTests;
 			sourceTree = "<group>";
@@ -155,6 +185,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FDA9871418C7CA4B0019DBB3 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				FDA9871318C7CA3F0019DBB3 /* Node.h */,
+				FDA9871518C7CA8D0019DBB3 /* FileScanner.h */,
+				FDA9871618C7CA8D0019DBB3 /* FileScanner.m */,
+				FDA9871818C7CCC80019DBB3 /* FileNode.h */,
+				FDA9871918C7CCC80019DBB3 /* FileNode.m */,
+				FDA9871B18C7CCDA0019DBB3 /* FolderNode.h */,
+				FDA9871C18C7CCDA0019DBB3 /* FolderNode.m */,
+				FDC9F4FC18C8679F0089732D /* Paths.h */,
+				FDC9F4FD18C8679F0089732D /* Paths.m */,
+			);
+			name = Node;
+			sourceTree = "<group>";
+		};
+		FDC9F4F618C7D19F0089732D /* Unzipper */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9F4F718C7D1BE0089732D /* Unzipper.h */,
+				FDC9F4F818C7D1BE0089732D /* Unzipper.m */,
+			);
+			name = Unzipper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD08013B18C7C26F00011351 /* Build configuration list for PBXNativeTarget "FirstSite" */;
 			buildPhases = (
+				997385B6BD564EB8A1F7BD9B /* Check Pods Manifest.lock */,
 				FD08010218C7C26E00011351 /* Sources */,
 				FD08010318C7C26E00011351 /* Frameworks */,
 				FD08010418C7C26E00011351 /* Resources */,
+				6B3C45AF07A241DC8A28F60C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,14 +305,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B3C45AF07A241DC8A28F60C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997385B6BD564EB8A1F7BD9B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD08010218C7C26E00011351 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */,
+				FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */,
+				FDC9F4FE18C8679F0089732D /* Paths.m in Sources */,
 				FD08012318C7C26F00011351 /* ViewController.m in Sources */,
 				FD08011A18C7C26F00011351 /* AppDelegate.m in Sources */,
+				FDA9871718C7CA8D0019DBB3 /* FileScanner.m in Sources */,
 				FD08011618C7C26F00011351 /* main.m in Sources */,
+				FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC9F4FB18C7D2530089732D /* UnzipperTests.m in Sources */,
 				FD08013818C7C26F00011351 /* FirstSiteTests.m in Sources */,
+				FDC9F4F518C7D0A00089732D /* FileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +486,7 @@
 		};
 		FD08013C18C7C26F00011351 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 525926D6002C46EAB28CE648 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -402,6 +500,7 @@
 		};
 		FD08013D18C7C26F00011351 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 525926D6002C46EAB28CE648 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -474,6 +573,7 @@
 				FD08013D18C7C26F00011351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD08013E18C7C26F00011351 /* Build configuration list for PBXNativeTarget "FirstSiteTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +582,7 @@
 				FD08014018C7C26F00011351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
