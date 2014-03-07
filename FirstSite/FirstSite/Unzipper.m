@@ -22,10 +22,7 @@
   
   [zipArchive UnzipOpenFile:zipPath];
   
-  BOOL ret = [zipArchive UnzipFileTo:docsURL.path overWrite:YES];
-  
-  
-  
+  [zipArchive UnzipFileTo:docsURL.path overWrite:YES];
 }
 
 @end

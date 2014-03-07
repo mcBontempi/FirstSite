@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Model.h"
+#import "SelectorViewControllerDelegate.h"
 
-@interface DisplayViewController : UIViewController
+@interface DisplayViewController : UIViewController <SelectorViewControllerDelegate>
 
 @property (nonatomic, strong) Model *model;
 

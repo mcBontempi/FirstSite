@@ -26,6 +26,8 @@
 		FD08012E18C7C26F00011351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010D18C7C26F00011351 /* UIKit.framework */; };
 		FD08013618C7C26F00011351 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD08013418C7C26F00011351 /* InfoPlist.strings */; };
 		FD08013818C7C26F00011351 /* FirstSiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08013718C7C26F00011351 /* FirstSiteTests.m */; };
+		FD8603A318CA82FA001E5D31 /* FolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8603A218CA82FA001E5D31 /* FolderCell.m */; };
+		FD8603A618CA830B001E5D31 /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8603A518CA830B001E5D31 /* FileCell.m */; };
 		FDA9871718C7CA8D0019DBB3 /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871618C7CA8D0019DBB3 /* FileScanner.m */; };
 		FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871918C7CCC80019DBB3 /* FileNode.m */; };
 		FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9871C18C7CCDA0019DBB3 /* FolderNode.m */; };
@@ -33,6 +35,8 @@
 		FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4F818C7D1BE0089732D /* Unzipper.m */; };
 		FDC9F4FB18C7D2530089732D /* UnzipperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4FA18C7D2530089732D /* UnzipperTests.m */; };
 		FDC9F4FE18C8679F0089732D /* Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F4FD18C8679F0089732D /* Paths.m */; };
+		FDC9F50018CA62100089732D /* cannon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F4FF18CA62100089732D /* cannon.pdf */; };
+		FDC9F50418CA74190089732D /* NSString+ContainsStringInArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F50318CA74190089732D /* NSString+ContainsStringInArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,11 @@
 		FD08013318C7C26F00011351 /* FirstSiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstSiteTests-Info.plist"; sourceTree = "<group>"; };
 		FD08013518C7C26F00011351 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD08013718C7C26F00011351 /* FirstSiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSiteTests.m; sourceTree = "<group>"; };
+		FD8603A018CA7A42001E5D31 /* SelectorViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectorViewControllerDelegate.h; path = FirstSite/SelectorViewControllerDelegate.h; sourceTree = "<group>"; };
+		FD8603A118CA82FA001E5D31 /* FolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderCell.h; path = FirstSite/FolderCell.h; sourceTree = "<group>"; };
+		FD8603A218CA82FA001E5D31 /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderCell.m; path = FirstSite/FolderCell.m; sourceTree = "<group>"; };
+		FD8603A418CA830B001E5D31 /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileCell.h; path = FirstSite/FileCell.h; sourceTree = "<group>"; };
+		FD8603A518CA830B001E5D31 /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileCell.m; path = FirstSite/FileCell.m; sourceTree = "<group>"; };
 		FDA9871318C7CA3F0019DBB3 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Node.h; path = FirstSite/Node.h; sourceTree = "<group>"; };
 		FDA9871518C7CA8D0019DBB3 /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileScanner.h; path = FirstSite/FileScanner.h; sourceTree = "<group>"; };
 		FDA9871618C7CA8D0019DBB3 /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileScanner.m; path = FirstSite/FileScanner.m; sourceTree = "<group>"; };
@@ -86,6 +95,9 @@
 		FDC9F4FA18C7D2530089732D /* UnzipperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnzipperTests.m; sourceTree = "<group>"; };
 		FDC9F4FC18C8679F0089732D /* Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paths.h; path = FirstSite/Paths.h; sourceTree = "<group>"; };
 		FDC9F4FD18C8679F0089732D /* Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paths.m; path = FirstSite/Paths.m; sourceTree = "<group>"; };
+		FDC9F4FF18CA62100089732D /* cannon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = cannon.pdf; path = Scores/cannon.pdf; sourceTree = "<group>"; };
+		FDC9F50218CA74190089732D /* NSString+ContainsStringInArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ContainsStringInArray.h"; path = "FirstSite/NSString+ContainsStringInArray.h"; sourceTree = "<group>"; };
+		FDC9F50318CA74190089732D /* NSString+ContainsStringInArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ContainsStringInArray.m"; path = "FirstSite/NSString+ContainsStringInArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,11 @@
 				D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */,
 				D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */,
 				D6D85B5A18C9F5090011AEFF /* Selector.storyboard */,
+				FD8603A018CA7A42001E5D31 /* SelectorViewControllerDelegate.h */,
+				FD8603A118CA82FA001E5D31 /* FolderCell.h */,
+				FD8603A218CA82FA001E5D31 /* FolderCell.m */,
+				FD8603A418CA830B001E5D31 /* FileCell.h */,
+				FD8603A518CA830B001E5D31 /* FileCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +155,7 @@
 		D6D85B6318CA00C60011AEFF /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				FDC9F4FF18CA62100089732D /* cannon.pdf */,
 				D6D85B6418CA00D20011AEFF /* sonata.jpg */,
 			);
 			name = Scores;
@@ -146,6 +164,7 @@
 		FD0800FD18C7C26E00011351 = {
 			isa = PBXGroup;
 			children = (
+				FDC9F50118CA73F70089732D /* Categories */,
 				D6D85B6318CA00C60011AEFF /* Scores */,
 				D6D85B5F18C9F7420011AEFF /* Model */,
 				D6D85B5918C9F4630011AEFF /* ViewControllers */,
@@ -247,6 +266,15 @@
 			name = Unzipper;
 			sourceTree = "<group>";
 		};
+		FDC9F50118CA73F70089732D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9F50218CA74190089732D /* NSString+ContainsStringInArray.h */,
+				FDC9F50318CA74190089732D /* NSString+ContainsStringInArray.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +358,7 @@
 				FD08012518C7C26F00011351 /* Images.xcassets in Resources */,
 				FD08011418C7C26F00011351 /* InfoPlist.strings in Resources */,
 				D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */,
+				FDC9F50018CA62100089732D /* cannon.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +417,12 @@
 				FD08011A18C7C26F00011351 /* AppDelegate.m in Sources */,
 				FDA9871718C7CA8D0019DBB3 /* FileScanner.m in Sources */,
 				FD08011618C7C26F00011351 /* main.m in Sources */,
+				FDC9F50418CA74190089732D /* NSString+ContainsStringInArray.m in Sources */,
 				D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */,
+				FD8603A618CA830B001E5D31 /* FileCell.m in Sources */,
 				FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */,
 				D6D85B6218C9F7600011AEFF /* Model.m in Sources */,
+				FD8603A318CA82FA001E5D31 /* FolderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

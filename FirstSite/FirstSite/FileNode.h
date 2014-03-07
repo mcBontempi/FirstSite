@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Node.h"
 
-@interface FileNode : NSObject
+@interface FileNode : NSObject <Node>
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *path;
 
 @end

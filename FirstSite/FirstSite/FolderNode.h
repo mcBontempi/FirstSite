@@ -12,6 +12,7 @@
 @interface FolderNode : NSObject <Node>
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSArray *folders;
 
 @end

@@ -8,25 +8,43 @@
 
 #import "FileScanner.h"
 #import "FolderNode.h"
+#import "FileNode.h"
+#import "NSString+ContainsStringInArray.h"
 
 @implementation FileScanner
 
 - (NSArray *)scanWithPath:(NSString *)path
 {
-    NSError * error;
-    NSArray * directoryContents =  [[NSFileManager defaultManager]
-                                    contentsOfDirectoryAtPath:path error:&error];
+  NSError * error;
+  NSArray * directoryContents =  [[NSFileManager defaultManager]
+                                  contentsOfDirectoryAtPath:path error:&error];
+  
+  NSMutableArray *array = [@[] mutableCopy];
+  
+  [directoryContents enumerateObjectsUsingBlock:^(NSString *innerPath, NSUInteger idx, BOOL *stop) {
     
-    NSMutableArray *array = [@[] mutableCopy];
+    id<Node> node = nil;
     
-    [directoryContents enumerateObjectsUsingBlock:^(NSString *innerPath, NSUInteger idx, BOOL *stop) {
+    if (![innerPath containsStringInArray:@[@"__MACOSX", @".DS_Store", @"Root.zip"]]) {
+      
+      if (innerPath.pathExtension.length && [innerPath.pathExtension containsStringInArray:@[@"jpg", @"png"]]) {
+        node = [[FileNode alloc] init];
+        NSLog(@"%@", innerPath);
+      }
+      else {
         FolderNode *folderNode = [[FolderNode alloc] init];
-        folderNode.name = innerPath;
         folderNode.folders = [self scanWithPath:[path stringByAppendingPathComponent:innerPath]];
         
-        [array addObject:folderNode];
-    }];
-    
-    return array;
-}
-@end
+        node = folderNode;
+      }
+      node.name = innerPath;
+      node.path = [path stringByAppendingPathComponent:innerPath];
+      [array addObject:node];
+    }
+          }];
+        
+        return array;
+        }
+        
+        
+        @end

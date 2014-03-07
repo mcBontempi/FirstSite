@@ -17,7 +17,7 @@
     
     Model *model = [[Model alloc] init];
     
-    DisplayViewController *vc =  self.window.rootViewController;
+    DisplayViewController *vc =  (DisplayViewController *)self.window.rootViewController;
     
     vc.model = model;
     

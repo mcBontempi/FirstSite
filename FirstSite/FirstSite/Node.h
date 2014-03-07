@@ -11,5 +11,9 @@
 @protocol Node <NSObject>
 
 - (NSString *)name;
+- (void) setName:(NSString *)name;
+
+- (NSString *)path;
+- (void) setPath:(NSString *)path;
 
 @end

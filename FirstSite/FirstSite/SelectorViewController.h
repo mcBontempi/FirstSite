@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectorViewControllerDelegate.h"
 
 @interface SelectorViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *root;
+@property (nonatomic, weak) id<SelectorViewControllerDelegate> delegate;
 
 @end
