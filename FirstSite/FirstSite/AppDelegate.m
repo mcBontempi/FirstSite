@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "DisplayViewController.h"
+#import "Model.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    Model *model = [[Model alloc] init];
+    
+    DisplayViewController *vc =  self.window.rootViewController;
+    
+    vc.model = model;
+    
     return YES;
 }
 							

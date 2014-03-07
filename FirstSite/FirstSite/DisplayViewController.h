@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model.h"
 
 @interface DisplayViewController : UIViewController
+
+@property (nonatomic, strong) Model *model;
 
 @end

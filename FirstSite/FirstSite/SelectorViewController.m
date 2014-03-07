@@ -7,6 +7,8 @@
 //
 
 #import "SelectorViewController.h"
+#import "Node.h"
+#import "FolderNode.h"
 
 @interface SelectorViewController ()
 
@@ -43,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.root.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,9 +56,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
+    id<Node> node = self.root[indexPath.row];
     
-    cell.textLabel.text=[NSString stringWithFormat:@"Row number %d",indexPath.row];
+    cell.textLabel.text= node.name;
     
     return cell;
 }
@@ -100,22 +102,22 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
-    // Pass the selected object to the new view controller.
+    UINavigationController *nc = [[UIStoryboard storyboardWithName:@"Selector" bundle:nil] instantiateInitialViewController];
+    SelectorViewController *vc = nc.viewControllers[0];
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    FolderNode *folderNode = self.root[indexPath.row];
+    
+    vc.root = folderNode.folders;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
  
- */
+
 
 @end

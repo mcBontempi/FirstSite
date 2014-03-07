@@ -10,4 +10,6 @@
 
 @interface SelectorViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *root;
+
 @end

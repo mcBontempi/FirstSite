@@ -9,10 +9,6 @@
 #import "DisplayViewController.h"
 #import "SelectorViewController.h"
 
-@interface DisplayViewController ()
-
-@end
-
 @implementation DisplayViewController {
     UIPopoverController *_popOver;
 }
@@ -20,27 +16,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (IBAction)buttonWasTapped:(id)sender {
-
-    SelectorViewController *vc =[[SelectorViewController alloc] initWithNibName:@"SelectorViewController" bundle:nil];
-    _popOver =[[UIPopoverController alloc] initWithContentViewController:vc];
-    //  [_popOver presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
-
+    
+    self.view.userInteractionEnabled = YES;
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewWasTapped:)]];
+    
+    self.view.layer.cornerRadius = 20;
+    
 }
 
 - (IBAction)viewWasTapped:(id)sender
 {
-    SelectorViewController *vc =[[SelectorViewController alloc] initWithNibName:@"SelectorViewController" bundle:nil];
-    _popOver =[[UIPopoverController alloc] initWithContentViewController:vc];
-  //  [_popOver presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+    UITapGestureRecognizer *tapRecognizer = (UITapGestureRecognizer *)sender;
+    CGPoint tapPoint = [tapRecognizer locationInView:self.view];
+    
+    UINavigationController *nc = [[UIStoryboard storyboardWithName:@"Selector" bundle:nil] instantiateInitialViewController];
+    SelectorViewController *vc = nc.viewControllers[0];
+    
+    vc.root = self.model.root;
+    
+    _popOver =[[UIPopoverController alloc] initWithContentViewController:nc];
+    [_popOver presentPopoverFromRect:CGRectMake(tapPoint.x, tapPoint.y, 0,0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 @end

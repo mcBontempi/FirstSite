@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		7F0E0331D2F44D4EA1BA0E03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2504630EAA5D470FA87ED279 /* libPods.a */; };
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
-		D6D85B4C18C8A98F0011AEFF /* SelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B4A18C8A98F0011AEFF /* SelectorViewController.xib */; };
+		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
+		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
 		FD08010A18C7C26F00011351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010918C7C26F00011351 /* Foundation.framework */; };
 		FD08010C18C7C26F00011351 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010B18C7C26F00011351 /* CoreGraphics.framework */; };
 		FD08010E18C7C26F00011351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010D18C7C26F00011351 /* UIKit.framework */; };
 		FD08011418C7C26F00011351 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD08011218C7C26F00011351 /* InfoPlist.strings */; };
 		FD08011618C7C26F00011351 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08011518C7C26F00011351 /* main.m */; };
 		FD08011A18C7C26F00011351 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08011918C7C26F00011351 /* AppDelegate.m */; };
-		FD08011D18C7C26F00011351 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08011B18C7C26F00011351 /* Main_iPhone.storyboard */; };
-		FD08012018C7C26F00011351 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08011E18C7C26F00011351 /* Main_iPad.storyboard */; };
+		FD08012018C7C26F00011351 /* Display.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08011E18C7C26F00011351 /* Display.storyboard */; };
 		FD08012318C7C26F00011351 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08012218C7C26F00011351 /* DisplayViewController.m */; };
 		FD08012518C7C26F00011351 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD08012418C7C26F00011351 /* Images.xcassets */; };
 		FD08012C18C7C26F00011351 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08012B18C7C26F00011351 /* XCTest.framework */; };
@@ -47,9 +47,11 @@
 /* Begin PBXFileReference section */
 		2504630EAA5D470FA87ED279 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		525926D6002C46EAB28CE648 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorViewController.h; sourceTree = "<group>"; };
-		D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorViewController.m; sourceTree = "<group>"; };
-		D6D85B4A18C8A98F0011AEFF /* SelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectorViewController.xib; sourceTree = "<group>"; };
+		D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectorViewController.h; path = FirstSite/SelectorViewController.h; sourceTree = "<group>"; };
+		D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectorViewController.m; path = FirstSite/SelectorViewController.m; sourceTree = "<group>"; };
+		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
+		D6D85B6018C9F7600011AEFF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = FirstSite/Model.h; sourceTree = "<group>"; };
+		D6D85B6118C9F7600011AEFF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = FirstSite/Model.m; sourceTree = "<group>"; };
 		FD08010618C7C26E00011351 /* FirstSite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD08010918C7C26F00011351 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD08010B18C7C26F00011351 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,10 +62,9 @@
 		FD08011718C7C26F00011351 /* FirstSite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstSite-Prefix.pch"; sourceTree = "<group>"; };
 		FD08011818C7C26F00011351 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD08011918C7C26F00011351 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FD08011C18C7C26F00011351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		FD08011F18C7C26F00011351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		FD08012118C7C26F00011351 /* DisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
-		FD08012218C7C26F00011351 /* DisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
+		FD08011F18C7C26F00011351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Display.storyboard; sourceTree = "<group>"; };
+		FD08012118C7C26F00011351 /* DisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DisplayViewController.h; path = FirstSite/DisplayViewController.h; sourceTree = "<group>"; };
+		FD08012218C7C26F00011351 /* DisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DisplayViewController.m; path = FirstSite/DisplayViewController.m; sourceTree = "<group>"; };
 		FD08012418C7C26F00011351 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD08012A18C7C26F00011351 /* FirstSiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD08012B18C7C26F00011351 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -110,9 +111,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6D85B5918C9F4630011AEFF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD08011E18C7C26F00011351 /* Display.storyboard */,
+				FD08012118C7C26F00011351 /* DisplayViewController.h */,
+				FD08012218C7C26F00011351 /* DisplayViewController.m */,
+				D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */,
+				D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */,
+				D6D85B5A18C9F5090011AEFF /* Selector.storyboard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D6D85B5F18C9F7420011AEFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6D85B6018C9F7600011AEFF /* Model.h */,
+				D6D85B6118C9F7600011AEFF /* Model.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FD0800FD18C7C26E00011351 = {
 			isa = PBXGroup;
 			children = (
+				D6D85B5F18C9F7420011AEFF /* Model */,
+				D6D85B5918C9F4630011AEFF /* ViewControllers */,
 				FDC9F4F618C7D19F0089732D /* Unzipper */,
 				FDA9871418C7CA4B0019DBB3 /* Node */,
 				FD08010F18C7C26F00011351 /* FirstSite */,
@@ -149,15 +174,8 @@
 			children = (
 				FD08011818C7C26F00011351 /* AppDelegate.h */,
 				FD08011918C7C26F00011351 /* AppDelegate.m */,
-				FD08011B18C7C26F00011351 /* Main_iPhone.storyboard */,
-				FD08011E18C7C26F00011351 /* Main_iPad.storyboard */,
-				FD08012118C7C26F00011351 /* DisplayViewController.h */,
-				FD08012218C7C26F00011351 /* DisplayViewController.m */,
 				FD08012418C7C26F00011351 /* Images.xcassets */,
 				FD08011018C7C26F00011351 /* Supporting Files */,
-				D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */,
-				D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */,
-				D6D85B4A18C8A98F0011AEFF /* SelectorViewController.xib */,
 			);
 			path = FirstSite;
 			sourceTree = "<group>";
@@ -296,11 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD08012018C7C26F00011351 /* Main_iPad.storyboard in Resources */,
+				FD08012018C7C26F00011351 /* Display.storyboard in Resources */,
 				FD08012518C7C26F00011351 /* Images.xcassets in Resources */,
-				FD08011D18C7C26F00011351 /* Main_iPhone.storyboard in Resources */,
 				FD08011418C7C26F00011351 /* InfoPlist.strings in Resources */,
-				D6D85B4C18C8A98F0011AEFF /* SelectorViewController.xib in Resources */,
+				D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +378,7 @@
 				FD08011618C7C26F00011351 /* main.m in Sources */,
 				D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */,
 				FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */,
+				D6D85B6218C9F7600011AEFF /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,20 +411,13 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FD08011B18C7C26F00011351 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD08011C18C7C26F00011351 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		FD08011E18C7C26F00011351 /* Main_iPad.storyboard */ = {
+		FD08011E18C7C26F00011351 /* Display.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FD08011F18C7C26F00011351 /* Base */,
 			);
-			name = Main_iPad.storyboard;
+			name = Display.storyboard;
+			path = FirstSite;
 			sourceTree = "<group>";
 		};
 		FD08013418C7C26F00011351 /* InfoPlist.strings */ = {
