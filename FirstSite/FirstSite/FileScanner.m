@@ -31,12 +31,6 @@
       if (innerPath.pathExtension.length && [innerPath.pathExtension containsStringInArray:@[@"jpg", @"png"]]) {
         FileNode *fileNode = [[FileNode alloc] init];
         
-        UIImage *big = [UIImage imageWithContentsOfFile:[path stringByAppendingPathComponent:innerPath]];
-        
-        UIImage *small = [big resizedImageWithSize:CGSizeMake(big.size.width/10,big.size.height/10)];
-        
-        fileNode.thumbnail = small;
-        
         node = fileNode;
         
         node.name = [innerPath stringByDeletingPathExtension];

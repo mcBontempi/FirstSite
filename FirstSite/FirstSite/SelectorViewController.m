@@ -10,6 +10,7 @@
 #import "Node.h"
 #import "FolderNode.h"
 #import "FileNode.h"
+#import "UIImageView+Haneke.h"
 
 @implementation SelectorViewController
 
@@ -38,7 +39,12 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"FileCell" forIndexPath:indexPath];
     
     FileNode *fileNode = (FileNode *)node;
-    cell.imageView.image = fileNode.thumbnail;
+    
+    cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
+    [cell.imageView sizeToFit];
+    
+    [cell.imageView hnk_setImageFromFile:fileNode.path];
+    
     
   }
   

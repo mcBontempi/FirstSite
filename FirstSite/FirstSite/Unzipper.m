@@ -38,7 +38,7 @@
   if (error == nil) {
     for (NSString *path in directoryContents) {
       NSString *fullPath = [[[Paths applicationDocumentsDirectory] path] stringByAppendingPathComponent:path];
-      BOOL removeSuccess = [fileMgr removeItemAtPath:fullPath error:&error];
+      [fileMgr removeItemAtPath:fullPath error:&error];
     }
   }
 }

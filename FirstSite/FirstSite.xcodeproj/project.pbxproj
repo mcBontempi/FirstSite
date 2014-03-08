@@ -11,6 +11,9 @@
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
 		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
 		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
+		FD0315E218CBC89F00101C81 /* HNKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315DF18CBC89F00101C81 /* HNKCache.m */; };
+		FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315E118CBC89F00101C81 /* UIImageView+Haneke.m */; };
+		FD0315E618CBCBF700101C81 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0315E518CBCBF700101C81 /* Placeholder.png */; };
 		FD08010A18C7C26F00011351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010918C7C26F00011351 /* Foundation.framework */; };
 		FD08010C18C7C26F00011351 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010B18C7C26F00011351 /* CoreGraphics.framework */; };
 		FD08010E18C7C26F00011351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08010D18C7C26F00011351 /* UIKit.framework */; };
@@ -56,6 +59,11 @@
 		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
 		D6D85B6018C9F7600011AEFF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = FirstSite/Model.h; sourceTree = "<group>"; };
 		D6D85B6118C9F7600011AEFF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = FirstSite/Model.m; sourceTree = "<group>"; };
+		FD0315DE18CBC89F00101C81 /* HNKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = FirstSite/Haneke/HNKCache.h; sourceTree = "<group>"; };
+		FD0315DF18CBC89F00101C81 /* HNKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKCache.m; path = FirstSite/Haneke/HNKCache.m; sourceTree = "<group>"; };
+		FD0315E018CBC89F00101C81 /* UIImageView+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Haneke.h"; path = "FirstSite/Haneke/UIImageView+Haneke.h"; sourceTree = "<group>"; };
+		FD0315E118CBC89F00101C81 /* UIImageView+Haneke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Haneke.m"; path = "FirstSite/Haneke/UIImageView+Haneke.m"; sourceTree = "<group>"; };
+		FD0315E518CBCBF700101C81 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Placeholder.png; path = Assets/Placeholder.png; sourceTree = "<group>"; };
 		FD08010618C7C26E00011351 /* FirstSite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD08010918C7C26F00011351 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD08010B18C7C26F00011351 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,9 +159,30 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		FD0315DD18CBC88E00101C81 /* Haneke */ = {
+			isa = PBXGroup;
+			children = (
+				FD0315DE18CBC89F00101C81 /* HNKCache.h */,
+				FD0315DF18CBC89F00101C81 /* HNKCache.m */,
+				FD0315E018CBC89F00101C81 /* UIImageView+Haneke.h */,
+				FD0315E118CBC89F00101C81 /* UIImageView+Haneke.m */,
+			);
+			name = Haneke;
+			sourceTree = "<group>";
+		};
+		FD0315E418CBCB0600101C81 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FD0315E518CBCBF700101C81 /* Placeholder.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		FD0800FD18C7C26E00011351 = {
 			isa = PBXGroup;
 			children = (
+				FD0315E418CBCB0600101C81 /* Assets */,
+				FD0315DD18CBC88E00101C81 /* Haneke */,
 				FDC9F50118CA73F70089732D /* Categories */,
 				D6D85B5F18C9F7420011AEFF /* Model */,
 				D6D85B5918C9F4630011AEFF /* ViewControllers */,
@@ -344,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0315E618CBCBF700101C81 /* Placeholder.png in Resources */,
 				FD08012018C7C26F00011351 /* Display.storyboard in Resources */,
 				FD08012518C7C26F00011351 /* Images.xcassets in Resources */,
 				FD08011418C7C26F00011351 /* InfoPlist.strings in Resources */,
@@ -401,8 +431,10 @@
 			files = (
 				FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */,
 				FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */,
+				FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */,
 				FDC9F4FE18C8679F0089732D /* Paths.m in Sources */,
 				FD08012318C7C26F00011351 /* DisplayViewController.m in Sources */,
+				FD0315E218CBC89F00101C81 /* HNKCache.m in Sources */,
 				FD08011A18C7C26F00011351 /* AppDelegate.m in Sources */,
 				FDA9871718C7CA8D0019DBB3 /* FileScanner.m in Sources */,
 				FD08011618C7C26F00011351 /* main.m in Sources */,
