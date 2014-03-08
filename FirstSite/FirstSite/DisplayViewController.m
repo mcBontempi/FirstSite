@@ -21,8 +21,10 @@
     self.view.userInteractionEnabled = YES;
     
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewWasTapped:)]];
-    
-    self.view.layer.cornerRadius = 20;
+  
+    // preload
+    self.model.root;
+  
     
 }
 

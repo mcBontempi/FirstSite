@@ -10,6 +10,7 @@
 #import "FolderNode.h"
 #import "FileNode.h"
 #import "NSString+ContainsStringInArray.h"
+#import "UIImage+Resizing.h"
 
 @implementation FileScanner
 
@@ -32,12 +33,11 @@
         
         UIImage *big = [UIImage imageWithContentsOfFile:[path stringByAppendingPathComponent:innerPath]];
         
-        UIImage *small = [UIImage imageWithCGImage:big.CGImage scale:0.025 orientation:big.imageOrientation];
+        UIImage *small = [big resizedImageWithSize:CGSizeMake(big.size.width/10,big.size.height/10)];
         
         fileNode.thumbnail = small;
         
         node = fileNode;
-        
         
         node.name = [innerPath stringByDeletingPathExtension];
         

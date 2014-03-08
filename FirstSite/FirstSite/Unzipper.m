@@ -20,9 +20,27 @@
   
   NSString *zipPath = [docsURL.path stringByAppendingPathComponent:@"Root.zip"];
   
-  [zipArchive UnzipOpenFile:zipPath];
+  BOOL success = [zipArchive UnzipOpenFile:zipPath];
   
-  [zipArchive UnzipFileTo:docsURL.path overWrite:YES];
+  if(success) {
+    [self removeAllFilesAndFolders];
+    [zipArchive UnzipFileTo:docsURL.path overWrite:YES];
+  }
+  
+}
+
+
+- (void)removeAllFilesAndFolders
+{
+  NSFileManager *fileMgr = [[NSFileManager alloc] init];
+  NSError *error = nil;
+  NSArray *directoryContents = [fileMgr contentsOfDirectoryAtPath:[[Paths applicationDocumentsDirectory] path] error:&error];
+  if (error == nil) {
+    for (NSString *path in directoryContents) {
+      NSString *fullPath = [[[Paths applicationDocumentsDirectory] path] stringByAppendingPathComponent:path];
+      BOOL removeSuccess = [fileMgr removeItemAtPath:fullPath error:&error];
+    }
+  }
 }
 
 @end
