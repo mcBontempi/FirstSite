@@ -28,7 +28,19 @@
     if (![innerPath containsStringInArray:@[@"__MACOSX", @".DS_Store", @"Root.zip"]]) {
       
       if (innerPath.pathExtension.length && [innerPath.pathExtension containsStringInArray:@[@"jpg", @"png"]]) {
-        node = [[FileNode alloc] init];
+        FileNode *fileNode = [[FileNode alloc] init];
+        
+        UIImage *big = [UIImage imageWithContentsOfFile:[path stringByAppendingPathComponent:innerPath]];
+        
+        UIImage *small = [UIImage imageWithCGImage:big.CGImage scale:0.025 orientation:big.imageOrientation];
+        
+        fileNode.thumbnail = small;
+        
+        node = fileNode;
+        
+        
+        node.name = [innerPath stringByDeletingPathExtension];
+        
         NSLog(@"%@", innerPath);
       }
       else {
@@ -36,15 +48,20 @@
         folderNode.folders = [self scanWithPath:[path stringByAppendingPathComponent:innerPath]];
         
         node = folderNode;
+      
+        
+        node.name = innerPath;
       }
-      node.name = innerPath;
+      
+      
       node.path = [path stringByAppendingPathComponent:innerPath];
+      
       [array addObject:node];
     }
-          }];
-        
-        return array;
-        }
-        
-        
-        @end
+  }];
+  
+  return array;
+}
+
+
+@end
