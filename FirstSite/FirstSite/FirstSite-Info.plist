@@ -27,7 +27,7 @@
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string>Display_iPhone</string>
+	<string>Display</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Display</string>
 	<key>UIRequiredDeviceCapabilities</key>
