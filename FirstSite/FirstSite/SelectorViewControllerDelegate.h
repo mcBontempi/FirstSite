@@ -14,4 +14,6 @@
 
 - (void)selectorViewControllerDelegate:(SelectorViewController *)selectorViewController didSelectFileAtPath:(NSString *)path;
 
+- (void)selectorViewControllerDelegateDidCancel:(SelectorViewController *)selectorViewController;
+
 @end

@@ -14,6 +14,24 @@
 
 @implementation SelectorViewController
 
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                       target:self
+                                                                                       action:@selector(cancelPressed:)];
+}
+
+#pragma mark - Actions
+
+- (IBAction)cancelPressed:(id)sender
+{
+    [self.delegate selectorViewControllerDelegateDidCancel:self];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

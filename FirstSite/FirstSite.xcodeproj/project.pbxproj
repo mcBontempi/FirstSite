@@ -11,6 +11,7 @@
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
 		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
 		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
+		FD01895B18D0875D00ABCB19 /* Display_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD01895918D0875D00ABCB19 /* Display_iPhone.storyboard */; };
 		FD0315E218CBC89F00101C81 /* HNKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315DF18CBC89F00101C81 /* HNKCache.m */; };
 		FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315E118CBC89F00101C81 /* UIImageView+Haneke.m */; };
 		FD0315E618CBCBF700101C81 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0315E518CBCBF700101C81 /* Placeholder.png */; };
@@ -59,6 +60,7 @@
 		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
 		D6D85B6018C9F7600011AEFF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = FirstSite/Model.h; sourceTree = "<group>"; };
 		D6D85B6118C9F7600011AEFF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = FirstSite/Model.m; sourceTree = "<group>"; };
+		FD01895A18D0875D00ABCB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FirstSite/Base.lproj/Display_iPhone.storyboard; sourceTree = "<group>"; };
 		FD0315DE18CBC89F00101C81 /* HNKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = FirstSite/Haneke/HNKCache.h; sourceTree = "<group>"; };
 		FD0315DF18CBC89F00101C81 /* HNKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKCache.m; path = FirstSite/Haneke/HNKCache.m; sourceTree = "<group>"; };
 		FD0315E018CBC89F00101C81 /* UIImageView+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Haneke.h"; path = "FirstSite/Haneke/UIImageView+Haneke.h"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				FD08011E18C7C26F00011351 /* Display.storyboard */,
+				FD01895918D0875D00ABCB19 /* Display_iPhone.storyboard */,
 				FD08012118C7C26F00011351 /* DisplayViewController.h */,
 				FD08012218C7C26F00011351 /* DisplayViewController.m */,
 				D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */,
@@ -375,6 +378,7 @@
 			files = (
 				FD0315E618CBCBF700101C81 /* Placeholder.png in Resources */,
 				FD08012018C7C26F00011351 /* Display.storyboard in Resources */,
+				FD01895B18D0875D00ABCB19 /* Display_iPhone.storyboard in Resources */,
 				FD08012518C7C26F00011351 /* Images.xcassets in Resources */,
 				FD08011418C7C26F00011351 /* InfoPlist.strings in Resources */,
 				D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */,
@@ -469,6 +473,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FD01895918D0875D00ABCB19 /* Display_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD01895A18D0875D00ABCB19 /* Base */,
+			);
+			name = Display_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		FD08011218C7C26F00011351 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -581,7 +593,7 @@
 				GCC_PREFIX_HEADER = "FirstSite/FirstSite-Prefix.pch";
 				INFOPLIST_FILE = "FirstSite/FirstSite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -596,7 +608,7 @@
 				GCC_PREFIX_HEADER = "FirstSite/FirstSite-Prefix.pch";
 				INFOPLIST_FILE = "FirstSite/FirstSite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
