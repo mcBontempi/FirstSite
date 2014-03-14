@@ -11,6 +11,7 @@
 		D64061E118D339FE00EA7C73 /* Peer.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061DE18D339FE00EA7C73 /* Peer.m */; };
 		D64061E218D339FE00EA7C73 /* PeerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061E018D339FE00EA7C73 /* PeerHelper.m */; };
 		D64061E518D33AA800EA7C73 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061E418D33AA800EA7C73 /* Card.m */; };
+		D64061E818D33BFD00EA7C73 /* CommsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061E718D33BFD00EA7C73 /* CommsConstants.m */; };
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
 		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
 		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
@@ -63,6 +64,8 @@
 		D64061E018D339FE00EA7C73 /* PeerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeerHelper.m; path = FirstSite/PeerHelper.m; sourceTree = "<group>"; };
 		D64061E318D33AA800EA7C73 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = FirstSite/Card.h; sourceTree = "<group>"; };
 		D64061E418D33AA800EA7C73 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = FirstSite/Card.m; sourceTree = "<group>"; };
+		D64061E618D33BC900EA7C73 /* CommsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommsConstants.h; path = FirstSite/CommsConstants.h; sourceTree = "<group>"; };
+		D64061E718D33BFD00EA7C73 /* CommsConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommsConstants.m; sourceTree = "<group>"; };
 		D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectorViewController.h; path = FirstSite/SelectorViewController.h; sourceTree = "<group>"; };
 		D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectorViewController.m; path = FirstSite/SelectorViewController.m; sourceTree = "<group>"; };
 		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				D64061DE18D339FE00EA7C73 /* Peer.m */,
 				D64061DF18D339FE00EA7C73 /* PeerHelper.h */,
 				D64061E018D339FE00EA7C73 /* PeerHelper.m */,
+				D64061E618D33BC900EA7C73 /* CommsConstants.h */,
+				D64061E718D33BFD00EA7C73 /* CommsConstants.m */,
 			);
 			name = Comms;
 			sourceTree = "<group>";
@@ -364,7 +369,7 @@
 		FD0800FE18C7C26E00011351 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Sparx;
 				TargetAttributes = {
 					FD08012918C7C26F00011351 = {
@@ -455,6 +460,7 @@
 				D64061E118D339FE00EA7C73 /* Peer.m in Sources */,
 				D64061E218D339FE00EA7C73 /* PeerHelper.m in Sources */,
 				FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */,
+				D64061E818D33BFD00EA7C73 /* CommsConstants.m in Sources */,
 				FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */,
 				FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */,
 				FDC9F4FE18C8679F0089732D /* Paths.m in Sources */,
@@ -527,7 +533,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -567,7 +572,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -630,7 +634,6 @@
 		FD08013F18C7C26F00011351 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FirstSite.app/FirstSite";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -653,7 +656,6 @@
 		FD08014018C7C26F00011351 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FirstSite.app/FirstSite";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

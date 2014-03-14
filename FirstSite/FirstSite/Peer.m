@@ -7,6 +7,7 @@
 //
 
 #import "Peer.h"
+#import "Card.h"
 
 @interface Peer()<MCSessionDelegate>
 

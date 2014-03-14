@@ -7,6 +7,7 @@
 //
 
 #import "PeerHelper.h"
+#import "CommsConstants.h"
 
 @interface PeerHelper()
 
