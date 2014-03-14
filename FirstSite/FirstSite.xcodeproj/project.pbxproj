@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7F0E0331D2F44D4EA1BA0E03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2504630EAA5D470FA87ED279 /* libPods.a */; };
+		D64061E118D339FE00EA7C73 /* Peer.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061DE18D339FE00EA7C73 /* Peer.m */; };
+		D64061E218D339FE00EA7C73 /* PeerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061E018D339FE00EA7C73 /* PeerHelper.m */; };
+		D64061E518D33AA800EA7C73 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D64061E418D33AA800EA7C73 /* Card.m */; };
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
 		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
 		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
@@ -54,6 +57,12 @@
 /* Begin PBXFileReference section */
 		2504630EAA5D470FA87ED279 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		525926D6002C46EAB28CE648 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D64061DD18D339FE00EA7C73 /* Peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Peer.h; path = FirstSite/Peer.h; sourceTree = "<group>"; };
+		D64061DE18D339FE00EA7C73 /* Peer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Peer.m; path = FirstSite/Peer.m; sourceTree = "<group>"; };
+		D64061DF18D339FE00EA7C73 /* PeerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeerHelper.h; path = FirstSite/PeerHelper.h; sourceTree = "<group>"; };
+		D64061E018D339FE00EA7C73 /* PeerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeerHelper.m; path = FirstSite/PeerHelper.m; sourceTree = "<group>"; };
+		D64061E318D33AA800EA7C73 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = FirstSite/Card.h; sourceTree = "<group>"; };
+		D64061E418D33AA800EA7C73 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = FirstSite/Card.m; sourceTree = "<group>"; };
 		D6D85B4818C8A98F0011AEFF /* SelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectorViewController.h; path = FirstSite/SelectorViewController.h; sourceTree = "<group>"; };
 		D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectorViewController.m; path = FirstSite/SelectorViewController.m; sourceTree = "<group>"; };
 		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
@@ -132,6 +141,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D64061DC18D339ED00EA7C73 /* Comms */ = {
+			isa = PBXGroup;
+			children = (
+				D64061E318D33AA800EA7C73 /* Card.h */,
+				D64061E418D33AA800EA7C73 /* Card.m */,
+				D64061DD18D339FE00EA7C73 /* Peer.h */,
+				D64061DE18D339FE00EA7C73 /* Peer.m */,
+				D64061DF18D339FE00EA7C73 /* PeerHelper.h */,
+				D64061E018D339FE00EA7C73 /* PeerHelper.m */,
+			);
+			name = Comms;
+			sourceTree = "<group>";
+		};
 		D6D85B5918C9F4630011AEFF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +203,7 @@
 		FD0800FD18C7C26E00011351 = {
 			isa = PBXGroup;
 			children = (
+				D64061DC18D339ED00EA7C73 /* Comms */,
 				FD0315E418CBCB0600101C81 /* Assets */,
 				FD0315DD18CBC88E00101C81 /* Haneke */,
 				FDC9F50118CA73F70089732D /* Categories */,
@@ -429,6 +452,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64061E118D339FE00EA7C73 /* Peer.m in Sources */,
+				D64061E218D339FE00EA7C73 /* PeerHelper.m in Sources */,
 				FDA9871A18C7CCC80019DBB3 /* FileNode.m in Sources */,
 				FDA9871D18C7CCDA0019DBB3 /* FolderNode.m in Sources */,
 				FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */,
@@ -442,6 +467,7 @@
 				FDAEEF7318CB2D8B00A77C71 /* UIImage+Resizing.m in Sources */,
 				D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */,
 				FD8603A618CA830B001E5D31 /* FileCell.m in Sources */,
+				D64061E518D33AA800EA7C73 /* Card.m in Sources */,
 				FDC9F4F918C7D1BE0089732D /* Unzipper.m in Sources */,
 				D6D85B6218C9F7600011AEFF /* Model.m in Sources */,
 				FD8603A318CA82FA001E5D31 /* FolderCell.m in Sources */,
