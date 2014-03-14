@@ -12,6 +12,7 @@
 @implementation DisplayViewController {
   UIPopoverController *_popOver;
   __weak IBOutlet UIImageView *_imageView;
+
 }
 
 #pragma mark - View lifecycle
@@ -47,18 +48,23 @@
     [_popOver presentPopoverFromRect:CGRectMake(tapPoint.x, tapPoint.y, 0,0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
   }
 }
+- (IBAction)imATeacherTapped:(id)sender {
+}
+- (IBAction)imAStudentTapped:(id)sender {
+}
 
 #pragma mark - SelectorViewControllerDelegate methods
 
 - (void)selectorViewControllerDelegate:(SelectorViewController *)selectorViewController didSelectFileAtPath:(NSString *)path
 {
-  _imageView.image = [UIImage imageWithContentsOfFile:path];
   
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
     [_popOver dismissPopoverAnimated:YES];
+    _imageView.image = [UIImage imageWithContentsOfFile:path];
   }
   else {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{ _imageView.image = [UIImage imageWithContentsOfFile:path];
+      ;}     ];
   }
 }
 

@@ -20,13 +20,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NH-0I-4nf">
+                                <rect key="frame" x="904" y="718" width="120" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ti6-Q4-qCx"/>
+                                    <constraint firstAttribute="width" constant="120" id="dxX-Y9-wwy"/>
+                                </constraints>
+                                <state key="normal" title="Im a Teacher">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imATeacherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfi-Uz-Ccx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMi-h5-U4R">
+                                <rect key="frame" x="0.0" y="718" width="120" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Ud8-39-rpi"/>
+                                    <constraint firstAttribute="height" constant="50" id="tFM-nH-eZS"/>
+                                </constraints>
+                                <state key="normal" title="Im a Student">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imAStudentTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTa-d5-YZh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8NH-0I-4nf" secondAttribute="trailing" id="0OH-ap-tDI"/>
+                            <constraint firstItem="IMi-h5-U4R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="10Y-O4-Qiz"/>
                             <constraint firstItem="wr3-dX-wPp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Dc-DO-0X5"/>
                             <constraint firstItem="wr3-dX-wPp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EbH-FY-Vvv"/>
+                            <constraint firstItem="TDl-1p-QNQ" firstAttribute="top" secondItem="8NH-0I-4nf" secondAttribute="bottom" id="Kgf-k0-GZr"/>
                             <constraint firstItem="TDl-1p-QNQ" firstAttribute="top" secondItem="wr3-dX-wPp" secondAttribute="bottom" id="RGT-Ln-FOe"/>
                             <constraint firstAttribute="trailing" secondItem="wr3-dX-wPp" secondAttribute="trailing" id="Ugg-9b-iic"/>
+                            <constraint firstItem="TDl-1p-QNQ" firstAttribute="top" secondItem="IMi-h5-U4R" secondAttribute="bottom" id="qwM-IN-UGA"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>

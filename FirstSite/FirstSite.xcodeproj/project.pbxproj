@@ -11,6 +11,7 @@
 		D6D85B4B18C8A98F0011AEFF /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B4918C8A98F0011AEFF /* SelectorViewController.m */; };
 		D6D85B5B18C9F5090011AEFF /* Selector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D85B5A18C9F5090011AEFF /* Selector.storyboard */; };
 		D6D85B6218C9F7600011AEFF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D85B6118C9F7600011AEFF /* Model.m */; };
+		FD01895F18D0910600ABCB19 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01895E18D0910600ABCB19 /* MultipeerConnectivity.framework */; };
 		FD0315E218CBC89F00101C81 /* HNKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315DF18CBC89F00101C81 /* HNKCache.m */; };
 		FD0315E318CBC89F00101C81 /* UIImageView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0315E118CBC89F00101C81 /* UIImageView+Haneke.m */; };
 		FD0315E618CBCBF700101C81 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0315E518CBCBF700101C81 /* Placeholder.png */; };
@@ -59,6 +60,8 @@
 		D6D85B5A18C9F5090011AEFF /* Selector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selector.storyboard; path = FirstSite/Selector.storyboard; sourceTree = "<group>"; };
 		D6D85B6018C9F7600011AEFF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = FirstSite/Model.h; sourceTree = "<group>"; };
 		D6D85B6118C9F7600011AEFF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = FirstSite/Model.m; sourceTree = "<group>"; };
+		FD01895C18D0904700ABCB19 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		FD01895E18D0910600ABCB19 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		FD0315DE18CBC89F00101C81 /* HNKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = FirstSite/Haneke/HNKCache.h; sourceTree = "<group>"; };
 		FD0315DF18CBC89F00101C81 /* HNKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKCache.m; path = FirstSite/Haneke/HNKCache.m; sourceTree = "<group>"; };
 		FD0315E018CBC89F00101C81 /* UIImageView+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Haneke.h"; path = "FirstSite/Haneke/UIImageView+Haneke.h"; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD01895F18D0910600ABCB19 /* MultipeerConnectivity.framework in Frameworks */,
 				FD08010C18C7C26F00011351 /* CoreGraphics.framework in Frameworks */,
 				FD08010E18C7C26F00011351 /* UIKit.framework in Frameworks */,
 				FD08010A18C7C26F00011351 /* Foundation.framework in Frameworks */,
@@ -208,6 +212,8 @@
 		FD08010818C7C26E00011351 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD01895E18D0910600ABCB19 /* MultipeerConnectivity.framework */,
+				FD01895C18D0904700ABCB19 /* GameKit.framework */,
 				FD08010918C7C26F00011351 /* Foundation.framework */,
 				FD08010B18C7C26F00011351 /* CoreGraphics.framework */,
 				FD08010D18C7C26F00011351 /* UIKit.framework */,
