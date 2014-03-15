@@ -19,11 +19,10 @@
 
 @property (nonatomic,strong) Peer *peer;
 
--(void) initialize;
 -(void) restart;
 -(void) start;
 -(void) stop;
--(void) sendData;
+-(void) sendData:(Card *)card;
 
 +(PeerHelper *) sharedHelper;
 

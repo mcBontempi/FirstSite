@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Model.h"
 #import "SelectorViewControllerDelegate.h"
-#import <GameKit/GameKit.h>
+#import "Peer.h"
 
-@interface DisplayViewController : UIViewController <SelectorViewControllerDelegate, GKSessionDelegate, GKPeerPickerControllerDelegate>
+@interface DisplayViewController : UIViewController <SelectorViewControllerDelegate>
 
 @property (nonatomic, strong) Model *model;
+@property (nonatomic, strong) Peer *peer;
 
 @end

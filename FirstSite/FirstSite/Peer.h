@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PeerDelegate.h"
+
 @import MultipeerConnectivity;
 
-@interface Peer : NSObject
+@interface Peer : NSObject <MCSessionDelegate>
 {
     
 }
@@ -17,5 +19,7 @@
 @property (nonatomic,strong) MCPeerID *peerId;
 @property (nonatomic,strong) MCSession *session;
 @property (nonatomic,strong) MCAdvertiserAssistant *assistant;
+
+@property (nonatomic, weak) id<PeerDelegate> delegate;
 
 @end

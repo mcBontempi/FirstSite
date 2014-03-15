@@ -98,6 +98,7 @@
 		FD08013318C7C26F00011351 /* FirstSiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstSiteTests-Info.plist"; sourceTree = "<group>"; };
 		FD08013518C7C26F00011351 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD08013718C7C26F00011351 /* FirstSiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSiteTests.m; sourceTree = "<group>"; };
+		FD7C771518D439C20059C1E7 /* PeerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeerDelegate.h; path = FirstSite/PeerDelegate.h; sourceTree = "<group>"; };
 		FD8603A018CA7A42001E5D31 /* SelectorViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectorViewControllerDelegate.h; path = FirstSite/SelectorViewControllerDelegate.h; sourceTree = "<group>"; };
 		FD8603A118CA82FA001E5D31 /* FolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderCell.h; path = FirstSite/FolderCell.h; sourceTree = "<group>"; };
 		FD8603A218CA82FA001E5D31 /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderCell.m; path = FirstSite/FolderCell.m; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				D64061E018D339FE00EA7C73 /* PeerHelper.m */,
 				D64061E618D33BC900EA7C73 /* CommsConstants.h */,
 				D64061E718D33BFD00EA7C73 /* CommsConstants.m */,
+				FD7C771518D439C20059C1E7 /* PeerDelegate.h */,
 			);
 			name = Comms;
 			sourceTree = "<group>";

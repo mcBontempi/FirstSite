@@ -29,9 +29,9 @@
     return sharedInstance;
 }
 
--(void) sendData
+-(void) sendData:(Card *)card
 {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[Card cardFromArchive]];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
     
     NSError *error;
     
@@ -51,25 +51,8 @@
 -(void) restart
 {
     [self stop];
-    [self initialize];
+   // [self initialize];
     [self start];
-}
-
--(void) initialize
-{
-    Card *card = [Card cardFromArchive];
-    NSString *peerName = [[UIDevice currentDevice] name];
-    
-    if(card)
-    {
-        peerName = card.name.length > 0 ? card.name : peerName;
-    }
-    
-    self.peer = [[Peer alloc] init];
-    self.peer.peerId = [[MCPeerID alloc] initWithDisplayName:peerName];
-    self.peer.session = [[MCSession alloc]  initWithPeer:self.peer.peerId];
-    self.peer.session.delegate = self.peer;
-    self.peer.assistant = [[MCAdvertiserAssistant alloc] initWithServiceType:kServiceType discoveryInfo:nil session:self.peer.session];
 }
 
 @end

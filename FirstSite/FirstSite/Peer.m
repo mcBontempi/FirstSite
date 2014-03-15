@@ -9,7 +9,7 @@
 #import "Peer.h"
 #import "Card.h"
 
-@interface Peer()<MCSessionDelegate>
+@interface Peer()
 
 @end
 
@@ -19,6 +19,10 @@
 {
     Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"CardReceivedNotification" object:card userInfo:@{@"Card":card}];
+  
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.delegate peer:self didRecieveCard:card];
+    });
 }
 
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress
