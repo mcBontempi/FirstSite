@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Display View Controller-->
@@ -21,13 +21,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NH-0I-4nf">
-                                <rect key="frame" x="904" y="718" width="120" height="50"/>
+                                <rect key="frame" x="864" y="718" width="160" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ti6-Q4-qCx"/>
-                                    <constraint firstAttribute="width" constant="120" id="dxX-Y9-wwy"/>
+                                    <constraint firstAttribute="width" constant="160" id="dxX-Y9-wwy"/>
                                 </constraints>
-                                <state key="normal" title="Im a Teacher">
+                                <state key="normal" title="Connect To Students">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -35,10 +35,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMi-h5-U4R">
-                                <rect key="frame" x="0.0" y="718" width="120" height="50"/>
+                                <rect key="frame" x="0.0" y="718" width="160" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Ud8-39-rpi"/>
+                                    <constraint firstAttribute="width" constant="160" id="Ud8-39-rpi"/>
                                     <constraint firstAttribute="height" constant="50" id="tFM-nH-eZS"/>
                                 </constraints>
                                 <state key="normal" title="Im a Student">
@@ -65,6 +65,8 @@
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="640"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="_imAStudentButton" destination="IMi-h5-U4R" id="4bu-1R-9lr"/>
+                        <outlet property="_imATeacherButton" destination="8NH-0I-4nf" id="4wh-NL-gga"/>
                         <outlet property="_imageView" destination="wr3-dX-wPp" id="CmG-cd-SQA"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@
 #import "FolderNode.h"
 #import "FileNode.h"
 #import "UIImageView+Haneke.h"
+#import "Paths.h"
 
 @implementation SelectorViewController
 
@@ -61,7 +62,7 @@
     cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
     [cell.imageView sizeToFit];
     
-    [cell.imageView hnk_setImageFromFile:fileNode.path];
+    [cell.imageView hnk_setImageFromFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:fileNode.path]];
     
     
   }

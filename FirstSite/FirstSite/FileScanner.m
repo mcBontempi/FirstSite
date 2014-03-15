@@ -11,14 +11,16 @@
 #import "FileNode.h"
 #import "NSString+ContainsStringInArray.h"
 #import "UIImage+Resizing.h"
+#import "Paths.h"
 
 @implementation FileScanner
 
 - (NSArray *)scanWithPath:(NSString *)path
 {
   NSError * error;
+  
   NSArray * directoryContents =  [[NSFileManager defaultManager]
-                                  contentsOfDirectoryAtPath:path error:&error];
+                                  contentsOfDirectoryAtPath:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:path] error:&error];
   
   NSMutableArray *array = [@[] mutableCopy];
   
@@ -42,13 +44,13 @@
         folderNode.folders = [self scanWithPath:[path stringByAppendingPathComponent:innerPath]];
         
         node = folderNode;
-      
-        
         node.name = innerPath;
       }
       
       
       node.path = [path stringByAppendingPathComponent:innerPath];
+ 
+      NSLog(@"%@", node.path);
       
       [array addObject:node];
     }

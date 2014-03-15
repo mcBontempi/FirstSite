@@ -10,6 +10,7 @@
 #import "SelectorViewController.h"
 #import "PeerHelper.h"
 #import "CommsConstants.h"
+#import "Paths.h"
 
 @interface DisplayViewController () <MCBrowserViewControllerDelegate, PeerDelegate>
 
@@ -23,6 +24,8 @@
   UIPopoverController *_popOver;
   __weak IBOutlet UIImageView *_imageView;
 
+  __weak IBOutlet UIButton *_imAStudentButton;
+  __weak IBOutlet UIButton *_imATeacherButton;
 }
 
 #pragma mark - Getters and Setters
@@ -31,7 +34,8 @@
 {
   if (!_clientPeer) {
     
-    MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:@"Client"];
+    NSString *peerName = [[UIDevice currentDevice] name];
+    MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:peerName];
     
     _clientPeer = [[Peer alloc] init];
     _clientPeer.delegate = self;
@@ -54,6 +58,7 @@
     MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:@"Server"];
     
     _serverPeer = [[Peer alloc] init];
+    _serverPeer.delegate = self;
     _serverPeer.peerId = peerID;
     _serverPeer.session = [[MCSession alloc]  initWithPeer:peerID];
     _serverPeer.session.delegate = _serverPeer;
@@ -115,7 +120,9 @@
   browserViewController.delegate = self;
   
   [self presentViewController:browserViewController animated:YES completion:nil];
-  
+
+  _imAStudentButton.hidden = YES;
+
 }
 
 - (IBAction)imAStudentTapped:(id)sender
@@ -123,6 +130,10 @@
   self.peerHelper.peer = self.clientPeer;
 
   [self.peerHelper start];
+
+  _imAStudentButton.hidden = YES;
+  _imATeacherButton.hidden = YES;
+  
 }
 
 #pragma mark - SelectorViewControllerDelegate methods
@@ -132,13 +143,13 @@
   
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
     [_popOver dismissPopoverAnimated:YES];
-    _imageView.image = [UIImage imageWithContentsOfFile:path];
+    _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:path]];
  
     
   }
   else {
     [self dismissViewControllerAnimated:YES completion:^{
-      _imageView.image = [UIImage imageWithContentsOfFile:path];
+      _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:path]];
       
       
       
@@ -176,16 +187,11 @@
   }];
 }
 
-
-
 #pragma mark - Peer Delegate
 
 - (void)peer:(Peer *)peer didRecieveCard:(Card *)card
 {
-    _imageView.image = [UIImage imageWithContentsOfFile:card.name];
+    _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:card.name]];
 }
-
-
-
 
 @end

@@ -20,7 +20,7 @@
         [unzipper unzip];
         
         FileScanner *scanner = [[FileScanner alloc] init];
-        _root = [scanner scanWithPath:[Paths applicationDocumentsDirectory].path];
+        _root = [scanner scanWithPath:@""];
    }
     
     return _root;
