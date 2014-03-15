@@ -551,7 +551,7 @@ NSString *const HNKErrorDomain = @"com.hpique.haneke";
         else
         {
             [self saveImage:image key:key format:format];
-        }
+        } 
     }
 }
 

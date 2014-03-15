@@ -23,7 +23,7 @@
 @implementation DisplayViewController {
   UIPopoverController *_popOver;
   __weak IBOutlet UIImageView *_imageView;
-
+  
   __weak IBOutlet UIButton *_imAStudentButton;
   __weak IBOutlet UIButton *_imATeacherButton;
 }
@@ -43,7 +43,7 @@
     _clientPeer.session = [[MCSession alloc]  initWithPeer:peerID];
     _clientPeer.session.delegate = _clientPeer;
     _clientPeer.assistant = [[MCAdvertiserAssistant alloc] initWithServiceType:kServiceType discoveryInfo:nil session:_clientPeer.session];
-
+    
   }
   
   return _clientPeer;
@@ -105,7 +105,6 @@
     [self presentViewController:nc animated:YES completion:nil];
   }
   else {
-    
     _popOver =[[UIPopoverController alloc] initWithContentViewController:nc];
     [_popOver presentPopoverFromRect:CGRectMake(tapPoint.x, tapPoint.y, 0,0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
   }
@@ -114,26 +113,22 @@
 {
   self.peerHelper.peer = self.serverPeer;
   
-  
-  // open up the browsing services
   MCBrowserViewController *browserViewController = [[MCBrowserViewController alloc] initWithServiceType:kServiceType session:self.serverPeer.session];
   browserViewController.delegate = self;
   
   [self presentViewController:browserViewController animated:YES completion:nil];
-
+  
   _imAStudentButton.hidden = YES;
-
 }
 
 - (IBAction)imAStudentTapped:(id)sender
 {
   self.peerHelper.peer = self.clientPeer;
-
+  
   [self.peerHelper start];
-
+  
   _imAStudentButton.hidden = YES;
   _imATeacherButton.hidden = YES;
-  
 }
 
 #pragma mark - SelectorViewControllerDelegate methods
@@ -144,36 +139,28 @@
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
     [_popOver dismissPopoverAnimated:YES];
     _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:path]];
- 
-    
   }
   else {
     [self dismissViewControllerAnimated:YES completion:^{
       _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:path]];
-      
-      
-      
-      ;}     ];
+      ;}
+     ];
   }
   Card *card = [[Card alloc] init];
   
   card.name = path;
   
   [self.peerHelper sendData:card];
-  
-
 }
-
 
 - (void)selectorViewControllerDelegateDidCancel:(SelectorViewController *)selectorViewController
 {
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
     [self dismissViewControllerAnimated:YES completion:nil];
   }
-  
 }
 
-
+#pragma mark - Browser View Controller Delegate
 
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
 {
@@ -182,16 +169,18 @@
 
 -(void) browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
 {
-  [browserViewController dismissViewControllerAnimated:YES completion:^{
-    
-  }];
+  [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Peer Delegate
 
 - (void)peer:(Peer *)peer didRecieveCard:(Card *)card
 {
-    _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:card.name]];
+  _imageView.image = [UIImage imageWithContentsOfFile:[[Paths applicationDocumentsDirectory].path stringByAppendingPathComponent:card.name]];
+  
+  if (!_imageView) {
+    [[[UIAlertView alloc] initWithTitle:@"File Error" message:@"Are the data stores in sync?" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show ];
+  }
 }
 
 @end
